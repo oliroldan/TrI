@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/styless.css" rel="sylesheet">
     <title> Wise Movie</title>
 </head>
 
-<body>
+<body class="bodyindex">
     <header>
         <h1>WISE MOVIE</h1>
         <img src="./img/logo.png" alt="logo wise movie">
@@ -19,10 +20,26 @@
                 <li><a href="./detail-movie.html">PELICULAS</a></li>
                 <li><a href="./detail-serie.html">SERIES</a></li>
             </ul>
-        </nav>       
+        </nav>    
+        <form action="search-results.html" method="get">
+           <div>
+            <input type="text" name="busqueda" value="" placeholder="Buscar...">
+         </div>
+            
+
+
+        </form>
     </header>
     <footer>
-        <p> HOME | CONTACTANOS |</p>
+        <nav>
+            <ul>
+                <li><a href="./index.html">HOME</a></li>
+                <li><a href="./favorite.html">FAVORITOS</a></li>
+                <li><a href="./detail-genres.html">GENEROS</a></li>
+                <li><a href="./detail-movie.html">PELICULAS</a></li>
+                <li><a href="./detail-serie.html">SERIES</a></li>
+            </ul>
+        </nav>       
         <p>Integrantes: Joaquina Edo, Olivia Roldan y Sol Raimondo</p>
     </footer>
 </body>
