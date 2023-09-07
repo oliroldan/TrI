@@ -73,5 +73,11 @@ h1{
     
 }
 
+h4{
+ 
+}
 
-
+h2{
+    background-color: rgba(white,0.5);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
