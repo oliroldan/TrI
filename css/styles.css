@@ -23,6 +23,7 @@ body{
     color: white;
     text-decoration: none;
     
+    
 
 }
 
@@ -43,6 +44,7 @@ body{
     align-items: flex-start; 
     width: 100%;
     height: auto;
+    font-weight: bolder;
     
  }
 
