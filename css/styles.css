@@ -56,7 +56,11 @@ body{
 h1{
     color: lightsteelblue;
     font-family: 'Mulish', sans-serif;
+    font-weight: bolder;
     
+}
+.titulo{
+    font-weight: bolder;
 }
 
 
@@ -102,6 +106,9 @@ h2{
     flex-direction: row;
 
     align-items: flex-start;
+    font-weight: bolder;
+    font-size:larger;
+    line-height: 25px;
 
 }
 
