@@ -111,8 +111,6 @@ h2{
 
 }
 
-
-/*HOME*/
 .grupos{
     display: flex;
     width: 100%;
@@ -121,7 +119,7 @@ h2{
 .cuadros-grupos{
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     width: 100%;
     font-size: 20px;
     margin: 20px;
@@ -132,8 +130,7 @@ h2{
 .imgindex{
     display: flex;
     width: 180px;
-    height: 250.92px;
-     
+    height: 250.92px;   
 }
 
 .singularcuadrado-texto{
@@ -144,27 +141,28 @@ h2{
 
 .cuadrado{
     width: 100%;
+    height: auto;
     font-size: 20px;
     margin: 20px;
     justify-content: space-around;
     align-items: center;
 }
 
-.genero{
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
 .foto{
     display: flex;
-    width: 180px;
-    height: 250.92px;
+    width: 200px;
+    height: auto;
+    padding: 20px;
+    align-self: flex-start;
 }
 
+.how{
+    display: flex;
+    width: 200px;
+    height: auto;
+    padding: 20px;
+    align-self: flex-start;
+}
 P{
     text-align: center;
     align-self: center;
