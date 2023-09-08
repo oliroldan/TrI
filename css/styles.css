@@ -22,8 +22,6 @@ body{
     background-color:rgb(54, 56, 201);
     color: white;
     text-decoration: none;
-    
-
 }
 
 .navegador{
@@ -161,4 +159,8 @@ h2{
 P{
     text-align: center;
     align-self: center;
+}
+
+@media (max-width: 420px){
+    body{}
 }
