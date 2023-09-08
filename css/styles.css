@@ -111,6 +111,7 @@ h2{
 
 }
 
+
 /*HOME*/
 .grupos{
     display: flex;
@@ -142,9 +143,6 @@ h2{
 }
 
 .cuadrado{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     width: 100%;
     font-size: 20px;
     margin: 20px;
@@ -156,6 +154,9 @@ h2{
     display: flex;
     width: 100%;
     justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .foto{
@@ -167,4 +168,39 @@ h2{
 P{
     text-align: center;
     align-self: center;
+}
+
+@media(max-width: 420px){
+
+    header{
+        flex-wrap: wrap;
+        max-width: 100%;
+        justify-content: center;
+
+
+    }
+    .imgindex{
+        align-items: center;
+        size: 90%;
+    }
+
+    .menu{
+        width: 100%;
+        align-self: center;
+    }
+
+    .pelis{
+        width: 100%;
+        height: auto;
+        align-items: center;
+    }
+
+    .menu2{
+        width: 100%;
+        align-self: center;
+    }
+
+
+
+
 }
