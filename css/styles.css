@@ -99,7 +99,7 @@ h2{
     display: flex;
     justify-content: center;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
 
 
 }
