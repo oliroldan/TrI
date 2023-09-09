@@ -167,16 +167,25 @@ P{
     text-align: center;
     align-self: center;
 }
+/*GENRES*/
+
+.generos.deseries{
+font-weight: bolder;
+color: aliceblue ;
+height: fit-content;
+text-decoration: none;
+text-decoration-line: none;
+
+}
 
 @media(max-width: 420px){
 
     header{
         flex-wrap: wrap;
         max-width: 100%;
-        justify-content: center;
-
-
+        justify-content:center;
     }
+    
     .imgindex{
         align-items: center;
         size: 90%;
@@ -197,8 +206,4 @@ P{
         width: 100%;
         align-self: center;
     }
-
-
-
-
 }
