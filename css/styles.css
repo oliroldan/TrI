@@ -58,6 +58,7 @@ h1{
     font-weight: bolder;
     
 }
+
 .titulo{
     font-weight: bolder;
 }
@@ -90,13 +91,24 @@ h2{
 }
 
 
-.foto-movie{
+.foto{
     display: flex;
-    width: 200px;
-    height: auto;
+    width: 290px;
+    height: 390px;
     padding: 20px;
-    align-self: flex-start;
-    
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+}
+
+h3{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+
+.pelis{
+    border: solid 1px white;
 }
 
 .detallemovie{
@@ -108,14 +120,15 @@ h2{
     font-weight: bolder;
     font-size:larger;
     line-height: 25px;
-
 }
 
 .grupos{
     display: flex;
     width: 100%;
     justify-content: center;
+    background-color: rgba(255, 255, 255, 0.5);
 }
+
 .cuadros-grupos{
     display: flex;
     flex-direction: row;
@@ -127,11 +140,17 @@ h2{
     align-items: center;
 }
 
-.imgindex{
-    display: flex;
-    width: 180px;
-    height: 250.92px;   
+.cuadrado{
+    width: 100%;
+    height: auto;
+    font-size: 20px;
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
+    border: solid white 1px;
+    align-self: center;
 }
+
 
 .singularcuadrado-texto{
     font-size: medium;
@@ -139,30 +158,7 @@ h2{
     padding: 15px;
 }
 
-.cuadrado{
-    width: 100%;
-    height: auto;
-    font-size: 20px;
-    margin: 20px;
-    justify-content: space-around;
-    align-items: center;
-}
 
-.foto{
-    display: flex;
-    width: 200px;
-    height: auto;
-    padding: 20px;
-    align-self: flex-start;
-}
-
-.how{
-    display: flex;
-    width: 200px;
-    height: auto;
-    padding: 20px;
-    align-self: flex-start;
-}
 P{
     text-align: center;
     align-self: center;
@@ -176,6 +172,12 @@ height: fit-content;
 text-decoration: none;
 text-decoration-line: none;
 
+}
+
+a{
+    text-decoration: none;
+    color: aliceblue;
+    font-weight: bold;
 }
 
 @media(max-width: 420px){
