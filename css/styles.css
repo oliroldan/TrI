@@ -108,7 +108,8 @@ h3{
 }
 
 .pelis{
-    
+    display: flex;
+    flex-direction: column;
     border: solid 1px white;
     height: 550px;
 }
@@ -157,9 +158,11 @@ h3{
 
 
 .singularcuadrado-texto{
+    display: flex;
+    flex-direction: row;
     font-size: medium;
-    justify-content: space-around;
-    padding: 15px; 
+    justify-content: space-between;
+    padding: 10px; 
 
 }
 .cuadrado.serie{
@@ -189,6 +192,7 @@ a{
     color: aliceblue;
     font-weight: bold;
     display: flex;
+    
 }
 
 @media(max-width: 420px){
