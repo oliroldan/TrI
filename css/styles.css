@@ -182,9 +182,11 @@ a{
 
 @media(max-width: 420px){
 
-    header{
+    .navegador{
+        display: flex;
         flex-wrap: wrap;
-        max-width: 100%;
+        flex-direction: row;
+        width: 100%;
         justify-content:center;
     }
     
@@ -196,16 +198,67 @@ a{
     .menu{
         width: 100%;
         align-self: center;
+        flex-wrap: wrap;
     }
 
     .pelis{
-        width: 100%;
+        width: 90%;
         height: auto;
         align-items: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-self: center;
+    }
+
+    .navegador2{
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 100%;
+        justify-content: center;
     }
 
     .menu2{
         width: 100%;
         align-self: center;
+        flex-wrap: wrap;
+    }
+
+    .grupos{
+        display: flex;
+        justify-self: center;
+        width: 100%;
+    }
+
+    .logo-cont{
+        flex-direction: column;
+    }
+
+    .cuadros-grupos{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+    }
+
+    .detallemovie{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    h2{
+        align-self: center;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .foto{
+        align-items: center;
+        align-self: center;
+        justify-content: center;
     }
 }
