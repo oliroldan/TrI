@@ -108,6 +108,7 @@ h3{
 }
 
 .pelis{
+    
     border: solid 1px white;
     height: 550px;
 }
@@ -142,7 +143,8 @@ h3{
 }
 
 .cuadrado{
-    
+    display: flex;
+    flex-direction: column;
     width: 100%;
     height: auto;
     font-size: 20px;
