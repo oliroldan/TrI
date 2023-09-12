@@ -35,6 +35,8 @@ body{
     
 }
 
+
+
 .logo-cont{
     display: flex;
     justify-content: space-between; 
@@ -231,6 +233,7 @@ a{
         flex-wrap: wrap;
         max-width: 100%;
         justify-content: center;
+        background-color: steelblue;
     }
 
     .menu2{
@@ -247,6 +250,7 @@ a{
 
     .logo-cont{
         flex-direction: column;
+        align-items: center;
     }
 
     .cuadros-grupos{
