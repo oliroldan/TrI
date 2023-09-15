@@ -57,13 +57,18 @@ body{
 h1{
     color: lightsteelblue;
     font-family: 'Mulish', sans-serif;
-    font-weight: bolder;
+  
+    
+}
+input{
+    background-color: rgba(182, 198, 252, 0.7);
+    border: 0;
+    border-radius: 5px;
+    outline: none;
     
 }
 
-.titulo{
-    font-weight: bolder;
-}
+
 
 
 .navegador2{
