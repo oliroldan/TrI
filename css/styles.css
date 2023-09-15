@@ -57,6 +57,7 @@ body{
 h1{
     color: lightsteelblue;
     font-family: 'Mulish', sans-serif;
+    
   
     
 }
@@ -93,7 +94,7 @@ input{
 
 h2{
     background-color: rgba(white,0.5);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     width: 300px;
     
 }
@@ -146,7 +147,7 @@ h3{
     flex-wrap: nowrap;
     width: 100%;
     font-size: 20px;
-    margin: 20px;
+    
     justify-content: space-around;
     align-items: center;
 }
@@ -267,7 +268,7 @@ a{
         justify-content: center;
         align-items: center;
         align-self: center;
-        margin:none;
+        
     }
 
     .detallemovie{
