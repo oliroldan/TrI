@@ -43,7 +43,7 @@ body{
     align-items: flex-start; 
     width: 100%;
     height: auto;
-    font-weight: bolder;
+    
     
  }
 
@@ -293,4 +293,8 @@ a{
     a{
         justify-content: center;
     }
-}
+    .cuadrado{
+        margin: 0px;
+        padding:20px;
+        width: 90%;
+    }
