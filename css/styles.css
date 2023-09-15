@@ -35,6 +35,8 @@ body{
     
 }
 
+
+
 .logo-cont{
     display: flex;
     justify-content: space-between; 
@@ -55,13 +57,18 @@ body{
 h1{
     color: lightsteelblue;
     font-family: 'Mulish', sans-serif;
-    font-weight: bolder;
+  
+    
+}
+input{
+    background-color: rgba(182, 198, 252, 0.7);
+    border: 0;
+    border-radius: 5px;
+    outline: none;
     
 }
 
-.titulo{
-    font-weight: bolder;
-}
+
 
 
 .navegador2{
@@ -108,6 +115,8 @@ h3{
 }
 
 .pelis{
+    display: flex;
+    flex-direction: column;
     border: solid 1px white;
     height: 550px;
 }
@@ -142,7 +151,8 @@ h3{
 }
 
 .cuadrado{
-    
+    display: flex;
+    flex-direction: column;
     width: 100%;
     height: auto;
     font-size: 20px;
@@ -155,9 +165,11 @@ h3{
 
 
 .singularcuadrado-texto{
+    display: flex;
+    flex-direction: row;
     font-size: medium;
-    justify-content: space-around;
-    padding: 15px; 
+    justify-content: space-between;
+    padding: 10px; 
 
 }
 .cuadrado.serie{
@@ -187,6 +199,7 @@ a{
     color: aliceblue;
     font-weight: bold;
     display: flex;
+    
 }
 
 @media(max-width: 420px){
@@ -225,6 +238,7 @@ a{
         flex-wrap: wrap;
         max-width: 100%;
         justify-content: center;
+        background-color: steelblue;
     }
 
     .menu2{
@@ -241,6 +255,7 @@ a{
 
     .logo-cont{
         flex-direction: column;
+        align-items: center;
     }
 
     .cuadros-grupos{
@@ -250,6 +265,7 @@ a{
         justify-content: center;
         align-items: center;
         align-self: center;
+        margin:none;
     }
 
     .detallemovie{
@@ -268,6 +284,10 @@ a{
     .foto{
         align-items: center;
         align-self: center;
+        justify-content: center;
+    }
+
+    a{
         justify-content: center;
     }
 }
