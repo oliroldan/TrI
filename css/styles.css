@@ -95,6 +95,7 @@ h2{
     background-color: rgba(white,0.5);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     width: 300px;
+    
 }
 
 
@@ -198,7 +199,8 @@ a{
     text-decoration: none;
     color: aliceblue;
     font-weight: bold;
-    display: flex;
+   
+    display: inline-block;
     
 }
 
