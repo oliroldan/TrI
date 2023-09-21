@@ -18,10 +18,9 @@ body{
     padding: 20px;
     height: 50px;
     width: 180px;
-    justify-content: space-around;
+    justify-content: space-around; 
     background-color:rgb(54, 56, 201);
     color: white;
-    text-decoration: none;
 }
 
 .navegador{
@@ -32,9 +31,7 @@ body{
     font-weight: bolder;
     background-color: rgb(54, 56, 201);
     height: fit-content;
-    
 }
-
 
 
 .logo-cont{
@@ -43,34 +40,26 @@ body{
     align-items: flex-start; 
     width: 100%;
     height: auto;
-    
-    
+    font-weight: bolder;
  }
 
 .logo{
     width: 250px;
     max-height: 100%;
-    display: flex;
-    
+    display: flex;    
 }
 
 h1{
     color: lightsteelblue;
     font-family: 'Mulish', sans-serif;
-    
-  
-    
 }
+
 input{
     background-color: rgba(182, 198, 252, 0.7);
     border: 0;
     border-radius: 5px;
     outline: none;
-    
 }
-
-
-
 
 .navegador2{
     display: flex;
@@ -78,7 +67,6 @@ input{
     align-items: center;
     list-style: none;
     padding-top: 15px;
-    
 }
 
 .menu2{
@@ -96,7 +84,6 @@ h2{
     background-color: rgba(white,0.5);
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     width: 300px;
-    
 }
 
 
@@ -130,7 +117,7 @@ h3{
 
     align-items: flex-start;
     font-weight: bolder;
-    font-size:larger;
+    font-size: larger;
     line-height: 25px;
 }
 
@@ -147,7 +134,6 @@ h3{
     flex-wrap: nowrap;
     width: 100%;
     font-size: 20px;
-    
     justify-content: space-around;
     align-items: center;
 }
@@ -176,7 +162,6 @@ h3{
 }
 .cuadrado.serie{
     border: solid white 1px;
-
 }
 
 
@@ -184,25 +169,23 @@ P{
     text-align: center;
     align-self: center;
 }
+
 /*GENRES*/
 
 .generos.deseries{
-font-weight: bolder;
-color: aliceblue ;
-height: fit-content;
-text-decoration: none;
-text-decoration-line: none;
-align-items: center;
-
+    font-weight: bolder;
+    color: aliceblue ;
+    height: fit-content;
+    text-decoration: none;
+    text-decoration-line: none;
+    align-items: center;
 }
 
 a{
     text-decoration: none;
     color: aliceblue;
     font-weight: bold;
-   
     display: inline-block;
-    
 }
 
 @media(max-width: 420px){
@@ -293,8 +276,4 @@ a{
     a{
         justify-content: center;
     }
-    .cuadrado{
-        margin: 0px;
-        padding:20px;
-        width: 90%;
-    }
+}
