@@ -158,8 +158,8 @@ h3{
     font-size: medium;
     justify-content: space-between;
     padding: 10px; 
-
 }
+
 .cuadrado.serie{
     border: solid white 1px;
 }
@@ -275,5 +275,10 @@ a{
 
     a{
         justify-content: center;
+    }
+    .cuadrado{
+        margin: 0px;
+        padding:20px;
+        width: 90%;
     }
 }
