@@ -18,7 +18,8 @@ fetch(urlSearch)
 
      for (let i = 0; i < peliculas.length; i++) {
         todasPelis += `<article class="portada">
-                            <a href="./detail-movie.html?idPelicula=${peliculas[i].id}"> <img class="foto" src="https://image.tmdb.org/t/p/original${peliculas[i].poster_path}"></a>
+                            <a href="./detail-movie.html?idPelicula=${peliculas[i].id}">
+                            <img class="foto" src="https://image.tmdb.org/t/p/original${peliculas[i].poster_path}"></a>
                             <h2>Película: <a href="./detail-movie.html?idPelicula=${peliculas[i].id}">${peliculas[i].title}</a></h2>
                         </article>`;
     }
