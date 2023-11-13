@@ -188,6 +188,13 @@ a{
     display: inline-block;
 }
 
+.database{
+    width: 20%;
+}
+footer{
+    text-align: center;
+}
+
 @media(max-width: 420px){
 
     .navegador{
@@ -280,5 +287,8 @@ a{
         margin: 0px;
         padding:20px;
         width: 90%;
+    }
+    .database{
+        width: 40%;
     }
 }
