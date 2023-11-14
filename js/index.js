@@ -17,7 +17,9 @@ fetch(mejorCalificada)
        todasPelis += ` <article class="pelis">
                            <a href="./detail-movie.html?idPelicula=${peliculas[i].id}">
                            <img class="foto" src="https://image.tmdb.org/t/p/original${peliculas[i].poster_path}"></a>
-                           <h2>Película: <a href="./detail-movie.html?idPelicula=${peliculas[i].id}">${peliculas[i].title}</a></h2>
+                           <h3><a href="./detail-movie.html?idPelicula=${peliculas[i].id}">${peliculas[i].title}</a></h3>
+                           <p class="singularcuadrado-texto"><a href="favorite.html?idPelicula=${peliculas[i].id}"> ✩ </a> Fecha de estreno: ${peliculas[i].release_date}
+                           </p>
                        </article>`;
     }
    
@@ -74,7 +76,7 @@ fetch(seriesTop)
                       <article class="pelis">
                            <a href="./detail-serie.html?idPelicula=${seriesMejor[i].id}">
                            <img class="foto" src="https://image.tmdb.org/t/p/original${seriesMejor[i].poster_path}"></a>
-                           <h2>Serie: <a href="./detail-serie.html?idPelicula=${seriesMejor[i].id}">${seriesMejor[i].name}</a></h2>
+                           <h3><a href="./detail-serie.html?idPelicula=${seriesMejor[i].id}">${seriesMejor[i].name}</a></h3>
                        </article>
                        </section>`;
                      
