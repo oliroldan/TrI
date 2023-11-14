@@ -13,8 +13,11 @@ fetch(mejorCalificada)
     for (let i =0; i < 6; i++){
         let pelicula = data.results[i];
         let poster = `https://image.tmdb.org/t/p/original/${pelicula.poster_path}`
-        content += `<article>
-
+        content += `
+        <article class="pelis">
+                <h3>Película: <a href="./index.html?idPelicula=${pelicula[i].id}"></h3>
+                <a href="./detail-movie.html"><img class="foto"  src="./img/matilda.webp" alt="Portada Matilda"></a>
+                <p class="singularcuadrado-texto"><a href="favorite.html"> ✩ </a> Fecha de estreno: 1996</p>
         </article>`
 
     }
