@@ -21,7 +21,13 @@ fetch(urlSearch)
                             <img class="foto" src="https://image.tmdb.org/t/p/original${peliculas[i].poster_path}"></a>
                             <h2>Película: <a href="./detail-movie.html?idPelicula=${peliculas[i].id}">${peliculas[i].title}</a></h2>
                         </article>`;
-    }
+
+     if(peliculas === " "){
+        document.querySelector(".resultados123").innerText = "No hay resultados para tu busqueda:  " + buscar
+     }else{
+        document.querySelector(".resultados123").innerText = "Resultados de busqueda para: " + buscar
+     }
+     }
     seccion.innerHTML = todasPelis;
     peliAgregada.innerText = buscar;
 
@@ -29,6 +35,7 @@ fetch(urlSearch)
 .catch(function(error){
     console.log(`El error es: ${error}`)
 })
+
 
 
 
