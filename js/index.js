@@ -15,9 +15,10 @@ fetch(mejorCalificada)
 
     for (let i = 0; i < 6; i++) {
        todasPelis += ` <article class="pelis">
+
                            <a href="./detail-movie.html?idPelicula=${peliculas[i].id}">
-                           <img class="foto" src="https://image.tmdb.org/t/p/original${peliculas[i].poster_path}"></a>
                            <h3><a href="./detail-movie.html?idPelicula=${peliculas[i].id}">${peliculas[i].title}</a></h3>
+                           <img class="foto" src="https://image.tmdb.org/t/p/original${peliculas[i].poster_path}"></a>
                            <p class="singularcuadrado-texto"><a href="favorite.html?idPelicula=${peliculas[i].id}"> ✩ </a> Fecha de estreno: ${peliculas[i].release_date}
                            </p>
                        </article>`;
@@ -47,8 +48,10 @@ fetch(populares)
     for (let i = 0; i < 6; i++) {
         contenido += `<article class="pelis">
                            <a href="./detail-movie.html?idPelicula=${peliculas[i].id}">
-                           <img class="foto" src="https://image.tmdb.org/t/p/original${peliculas[i].poster_path}"></a>
                            <h3> <a href="./detail-movie.html?idPelicula=${peliculas[i].id}">${peliculas[i].title}</a></h3>
+                           <img class="foto" src="https://image.tmdb.org/t/p/original${peliculas[i].poster_path}"></a>
+                           <p class="singularcuadrado-texto"><a href="favorite.html?idPelicula=${peliculas[i].id}"> ✩ </a> Fecha de estreno: ${peliculas[i].release_date}
+                           </p>
                        </article>`;
     }
    
@@ -72,13 +75,14 @@ fetch(seriesTop)
     let bloque = "";
 
     for (let i = 0; i < 6; i++) {
-        bloque += `  <section class="cuadros-grupos">
+        bloque += ` 
                       <article class="pelis">
+                           <h3><a href="./detail-serie.html?idPelicula=${seriesMejor[i].id}">${seriesMejor[i].name}</a></h3>
                            <a href="./detail-serie.html?idPelicula=${seriesMejor[i].id}">
                            <img class="foto" src="https://image.tmdb.org/t/p/original${seriesMejor[i].poster_path}"></a>
-                           <h3><a href="./detail-serie.html?idPelicula=${seriesMejor[i].id}">${seriesMejor[i].name}</a></h3>
-                       </article>
-                       </section>`;
+                           <p class="singularcuadrado-texto"><a href="favorite.html?idPelicula=${seriesMejor[i].id}"> ✩ </a> Fecha de estreno: ${peliculas[i].first_air_date}
+                           </p>
+                       </article>`;
                      
     }
    
