@@ -1,5 +1,5 @@
 let ApiKey = "3df94698eaca4ce878e2c557de004fb2";
-let mejorCalificada =`https://api.themoviedb.org/3/movie/top_rated?api_key=${ApiKey}`;
+let mejorCalificada =`https://api.themoviedb.org/3/movie/top_rated?api_key=${ApiKey}&query=${buscar}`;
 let mejor = document.querySelector("#mejorcalificacion")
 
 fetch(mejorCalificada)
