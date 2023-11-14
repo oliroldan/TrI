@@ -14,7 +14,7 @@ fetch(mejorCalificada)
     let todasPelis = "";
 
     for (let i = 0; i < 6; i++) {
-       todasPelis += `<article class="portada">
+       todasPelis += ` <article class="pelis">
                            <a href="./detail-movie.html?idPelicula=${peliculas[i].id}">
                            <img class="foto" src="https://image.tmdb.org/t/p/original${peliculas[i].poster_path}"></a>
                            <h2>Película: <a href="./detail-movie.html?idPelicula=${peliculas[i].id}">${peliculas[i].title}</a></h2>
@@ -43,10 +43,10 @@ fetch(populares)
     let contenido = "";
 
     for (let i = 0; i < 6; i++) {
-        contenido += `<article class="portada">
+        contenido += `<article class="pelis">
                            <a href="./detail-movie.html?idPelicula=${peliculas[i].id}">
                            <img class="foto" src="https://image.tmdb.org/t/p/original${peliculas[i].poster_path}"></a>
-                           <h2>Película: <a href="./detail-movie.html?idPelicula=${peliculas[i].id}">${peliculas[i].title}</a></h2>
+                           <h3> <a href="./detail-movie.html?idPelicula=${peliculas[i].id}">${peliculas[i].title}</a></h3>
                        </article>`;
     }
    
@@ -70,11 +70,14 @@ fetch(seriesTop)
     let bloque = "";
 
     for (let i = 0; i < 6; i++) {
-        bloque += `<article class="portada">
+        bloque += `  <section class="cuadros-grupos">
+                      <article class="pelis">
                            <a href="./detail-serie.html?idPelicula=${seriesMejor[i].id}">
                            <img class="foto" src="https://image.tmdb.org/t/p/original${seriesMejor[i].poster_path}"></a>
                            <h2>Serie: <a href="./detail-serie.html?idPelicula=${seriesMejor[i].id}">${seriesMejor[i].name}</a></h2>
-                       </article>`;
+                       </article>
+                       </section>`;
+                     
     }
    
    seccion.innerHTML = bloque;
