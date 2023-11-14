@@ -10,10 +10,16 @@ fetch(urlSearch)
 })
 .then(function(data){
     console.log(data.results)
-     let peliculas = data.results;
+     let peliculas = data.results || [];
      let seccion = document.querySelector(".cuadros-grupos");
      let peliAgregada = document.querySelector(".pelisearch"); 
      let todasPelis = "";
+     
+     if(peliculas.length === 0){
+        document.querySelector(".resultados123").innerText = "No hay resultados para su busqueda"
+     }else{
+        document.querySelector(".resultados123").innerText = "Resultados de busqueda para: " + buscar
+     }
 
      for (let i = 0; i < peliculas.length; i++) {
         todasPelis += `<article class="portada">
@@ -22,11 +28,7 @@ fetch(urlSearch)
                             <h2>Película: <a href="./detail-movie.html?idPelicula=${peliculas[i].id}">${peliculas[i].title}</a></h2>
                         </article>`;
 
-     if(peliculas === " "){
-        document.querySelector(".resultados123").innerText = "No hay resultados para tu busqueda:  " + buscar
-     }else{
-        document.querySelector(".resultados123").innerText = "Resultados de busqueda para: " + buscar
-     }
+     
      }
     seccion.innerHTML = todasPelis;
     peliAgregada.innerText = buscar;
