@@ -76,14 +76,15 @@ fetch(seriesTop)
 
     for (let i = 0; i < 6; i++) {
         bloque += ` 
-                      <article class="pelis">
-                           <h3><a href="./detail-serie.html?idPelicula=${seriesMejor[i].id}">${seriesMejor[i].name}</a></h3>
-                           <a href="./detail-serie.html?idPelicula=${seriesMejor[i].id}">
-                           <img class="foto" src="https://image.tmdb.org/t/p/original${seriesMejor[i].poster_path}"></a>
-                           <p class="singularcuadrado-texto"><a href="favorite.html?idPelicula=${seriesMejor[i].id}"> ✩ </a> Fecha de estreno: ${peliculas[i].first_air_date}
-                           </p>
-                       </article>`;
-                     
+            <article class="pelis">
+                <h3><a href="./detail-serie.html?idPelicula=${seriesMejor[i].id}">${seriesMejor[i].name}</a></h3>
+                <a href="./detail-serie.html?idPelicula=${seriesMejor[i].id}">
+                    <img class="foto" src="https://image.tmdb.org/t/p/original${seriesMejor[i].poster_path}">
+                </a>
+                <p class="singularcuadrado-texto">
+                    <a href="favorite.html?idPelicula=${seriesMejor[i].id}"> ✩ </a>Fecha de estreno: ${seriesMejor[i].first_air_date}
+                </p>
+            </article>`;
     }
    
    seccion.innerHTML = bloque;
