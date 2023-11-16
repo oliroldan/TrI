@@ -2,6 +2,7 @@ let ApiKey = "3df94698eaca4ce878e2c557de004fb2";
 let urlParams = new URLSearchParams(window.location.search);
 let movieId = urlParams.get('idPelicula');
 let detallePelicula = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${ApiKey}&language=es`;
+let recomendaciones = ` `
 
 fetch(detallePelicula)
   .then(function(response){
@@ -9,12 +10,8 @@ fetch(detallePelicula)
   })
   .then(function(data){
     console.log(data);
-    let pelicula = data;
-
-    
+    let pelicula = data
     let seccion = document.querySelector(".detallemovie");
-
-    
     let detallePeliculaHTML = `
       <article class="detallemovie">
         <h2>${pelicula.title}</h2>
@@ -54,3 +51,31 @@ fetch(detallePelicula)
     return enlacesGeneros;
   }
   
+
+
+fetch(recomendaciones)
+.then(function(response){
+  return response.json();
+})
+
+.then(function(data){
+  console.log(data.results)
+  let recomendacion = data.results
+  let seccion1 = document.querySelector(".oculta")
+  let recomendaciones = ""
+
+  for(let i = 0; i < recomendacion.length; i++){
+    recomendaciones +=
+    `<article>
+      <h3>Recomendaciones</h3>
+      <img class="foto" src="https://image.tmdb.org/t/p/original${recomendacion.poster_path}
+      <a href = https://api.themoviedb.org/3/movie/${pelicula[i].id}/recommendations></a>
+    </article>
+    `
+  }
+  seccion1.innerHTML = recomendaciones
+})
+ 
+.catch(function(error){
+  console.log(`El error es: ${error}`);
+});
