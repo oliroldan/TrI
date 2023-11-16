@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">                          
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wise Movie | Home</title>
+    <title>Wise Movie | Géneros</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200&display=swap" rel="stylesheet">
@@ -12,86 +13,35 @@
 
 <body>
     <header>
-        <div class="logo-cont"> 
+        <div class="logo-cont">
             <h1 class="titulo">WISE MOVIE</h1>
             <img class="logo" src="./img/logo4.png" alt="logo wise movie">
             <form action="search-results.html" method="get">
-                <input type="text" name="busqueda" value="" placeholder="Buscar peliculas...">
+                <input type="text" name="busqueda" value="" placeholder="Buscar películas...">
             </form>
         </div>
-   
-     <nav>
-         <ul class="navegador">
-             <li><a class="menu" href="./index.html">HOME</a></li>
-            <li><a class="menu" href="./favorite.html">FAVORITOS</a></li>
-            <li><a class="menu" href="./genres.html">GÉNEROS</a></li>
-            <li><a class="menu" href="./detail-genres.html">DETALLE</a></li>
-            <li><a class="menu" href="./detail-movie.html">PELÍCULAS</a></li>
-            <li><a class="menu" href="./detail-serie.html">SERIES</a></li>
-         </ul>
-     </nav>    
+
+        <nav>
+            <ul class="navegador">
+                <li><a class="menu" href="./index.html">HOME</a></li>
+                <li><a class="menu" href="./favorite.html">FAVORITOS</a></li>
+                <li><a class="menu" href="./genres.html">GÉNEROS</a></li>
+                <li><a class="menu" href="./detail-genres.html">DETALLE</a></li>
+                <li><a class="menu" href="./detail-movie.html">PELÍCULAS</a></li>
+                <li><a class="menu" href="./detail-serie.html">SERIES</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
-        <section class="generos depeliculas">
-            <H2 class="grupos">Géneros de Películas</H2>
-            
-            <article class="genero">
-                <a href="detail-genres.html">✦COMEDIA</a>
-            </article>
-
-            <article class="genero">
-                <a href="detail-genres.html">✦ACCIÓN</a>
-            </article>
-
-            <article class="genero">
-                <a href="detail-genres.html">✦DRAMA</a>
-            </article>
-
-            <article class="genero">
-    
-                <a href="detail-genres.html">✦FAMILIAR</a>
-            </article>
-
-            <article class="genero">
-            
-                <a href="detail-genres.html">✦ROMANCE</a>
-            </article>
-
-            <article class="genero">
-                <a href="detail-genres.html">✦MUSICAL</a>
-            </article>
+        <section class="generos-peliculas">
+            <h2>Géneros de Películas</h2>
+            <ul id="lista-peliculas" class="generosApiPeli"></ul>
         </section>
 
-        <section class="generos deseries">
-            <h2 class="grupos">Géneros de series</h2>
-            <article class="genero">
-                <a href="detail-genres.html">✦COMEDIA</a>
-            </article>
-
-            <article class="genero">
-                <a href="detail-genres.html">✦FAMILIAR</a>
-            </article>
-
-            <article class="genero">
-                <a href="detail-genres.html">✦DRAMA</a>
-            </article>
-
-            <article class="genero">
-                <a href="detail-genres.html">✦THRILLER</a>
-            </article>
-
-            <article class="genero">
-                <a href="detail-genres.html">✦MUSICAL</a>
-            </article>
-        </section>
-
-        <section class = "generosApiSeries">
-
-        </section>
-       
-        <section class="generosApiPeli">
-
+        <section class="generos-series">
+            <h2>Géneros de Series</h2>
+            <ul id="lista-series" class="generosApiSeries"></ul>
         </section>
     </main>
 
@@ -102,13 +52,14 @@
                 <li><a class="menu2" href="./favorite.html">FAVORITOS</a></li>
                 <li><a class="menu2" href="./genres.html">GÉNEROS</a></li>
                 <li><a class="menu2" href="./detail-genres.html">DETALLE</a></li>
-                <li ><a class="menu2" href="./detail-movie.html">PELÍCULAS</a></li>
+                <li><a class="menu2" href="./detail-movie.html">PELÍCULAS</a></li>
                 <li><a class="menu2" href="./detail-serie.html">SERIES</a></li>
             </ul>
-        </nav>       
+        </nav>
         <p>Integrantes: Joaquina Edo, Olivia Roldan y Sol Raimondo</p>
         <img class="database" src="img/logo_Db.svg">
     </footer>
-    <script src = "js/genres.js"></script>
+    <script src="./js/genres.js"></script>
 </body>
+
 </html>

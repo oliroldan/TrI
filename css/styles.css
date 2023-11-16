@@ -194,6 +194,7 @@ a{
     font-size: 18px;
 }
 
+
 .database{
     width: 20%;
 }
@@ -266,6 +267,7 @@ footer{
         align-self: center;
     }
 
+}
     .detallemovie{
         display: flex;
         flex-direction: column;
