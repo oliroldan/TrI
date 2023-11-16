@@ -1,5 +1,7 @@
 let ApiKey = "3df94698eaca4ce878e2c557de004fb2";
-let detalleSerie = `https://api.themoviedb.org/3/tv/{series_id}=${ApiKey}`
+const urlParams = new URLSearchParams(window.location.search);
+const movieId = urlParams.get('idSerie');
+let detalleSerie = `https://api.themoviedb.org/3/tv/${id_serie}?api_key=${ApiKey}`
 
 fetch(detalleSerie)
 .then(function(response){
