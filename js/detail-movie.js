@@ -3,6 +3,7 @@ let urlParams = new URLSearchParams(window.location.search);
 let movieId = urlParams.get('idPelicula');
 let detallePelicula = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${ApiKey}&language=es`;
 let recomendaciones = `https://api.themoviedb.org/3/movie/${movieId}/recommendations?api_key=${ApiKey}&language=es`;
+let reviews= `https://api.themoviedb.org/3/movie/${movieId}/reviews?api_key=${ApiKey}&language=es`
 
 fetch(detallePelicula)
   .then(function(response){
@@ -81,6 +82,36 @@ fetch(detallePelicula)
           console.log(`El error es: ${error}`);
         });
     });
+    /*/
+    let bot = document.querySelector('.verRecomendaciones');				
+    boton.addEventListener('click', function() {
+      
+      fetch(recomendaciones)
+        .then(function(response) {
+          return response.json();
+        })
+        .then(function(data) {
+          console.log(data.results);
+          let recomendacion = data.results;
+          let seccion1 = document.querySelector(".oculta");
+          let recomendacionesHTML = "";
+
+          
+          for(let i = 0; i < 5; i++){
+            recomendacionesHTML +=
+            `<article>
+              <h3><a href="./detail-movie.html?idPelicula=${recomendacion[i].id}">${recomendacion[i].title}</a></h3>
+              <a href="./detail-movie.html?idPelicula=${recomendacion[i].id}">
+              <img class="foto" src="https://image.tmdb.org/t/p/original${recomendacion[i].poster_path}"></a>
+            </article>`;
+          }
+          seccion1.innerHTML = recomendacionesHTML;
+
+        .catch(function(error) {
+          console.log(`El error es: ${error}`);
+        });
+    });
+    /*/
   })
   .catch(function(error){
     console.log(`El error es: ${error}`);
