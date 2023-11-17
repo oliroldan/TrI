@@ -201,6 +201,18 @@ a{
 footer{
     text-align: center;
 }
+.oculta{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.verRecomendaciones{
+    background-color: rgba(182, 198, 252, 0.7);
+    border: 0;
+    border-radius: 5px;
+    outline: none;
+    color: white;
+}
 
 @media(max-width: 420px){
 

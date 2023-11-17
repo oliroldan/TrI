@@ -2,8 +2,7 @@ let ApiKey = "3df94698eaca4ce878e2c557de004fb2";
 let urlParams = new URLSearchParams(window.location.search);
 let movieId = urlParams.get('idPelicula');
 let detallePelicula = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${ApiKey}&language=es`;
-let recomendaciones = ` `
-let recomendacion = "Ver recomendaciones"
+let recomendaciones = `https://api.themoviedb.org/3/movie/${movieId}/recommendations?api_key=${ApiKey}&language=es`;
 
 fetch(detallePelicula)
   .then(function(response){
@@ -11,7 +10,7 @@ fetch(detallePelicula)
   })
   .then(function(data){
     console.log(data);
-    let pelicula = data
+    let pelicula = data;
     let seccion = document.querySelector(".detallemovie");
     let detallePeliculaHTML = `
       <article class="detallemovie">
@@ -23,11 +22,10 @@ fetch(detallePelicula)
           <li>Duración: ${pelicula.runtime} minutos</li>
           <li>Sinopsis: ${pelicula.overview}</li>
           <li>Géneros: ${obtenerGeneros(pelicula.genres)}</li>
-          <li class="boton"> ${recomendacion} </li>
+          <li class="boton"> <button class="verRecomendaciones">Ver Recomendaciones</button></li>
         </ul>
       </article>`;
 
-    
     seccion.innerHTML = detallePeliculaHTML;
 
     function obtenerGeneros(generos) {
@@ -36,7 +34,6 @@ fetch(detallePelicula)
       for (let i = 0; i < generos.length; i++) {
         let genero = generos[i];
         let enlace = `<a href="./detalle-genero.html?idGenero=${genero.id}">${genero.name}</a>`;
-    
       
         enlacesGeneros += enlace;
     
@@ -48,43 +45,41 @@ fetch(detallePelicula)
       return enlacesGeneros;
     };
 
-  let boton = document.querySelector('boton');				
-  boton.addEventListener('click', function(){  //PROBLEMA !!!!
+    
+    let boton = document.querySelector('.verRecomendaciones');				
+    boton.addEventListener('click', function() {
+      
+      fetch(recomendaciones)
+        .then(function(response) {
+          return response.json();
+        })
+        .then(function(data) {
+          console.log(data.results);
+          let recomendacion = data.results;
+          let seccion1 = document.querySelector(".oculta");
+          let recomendacionesHTML = "";
 
-      			
-fetch(recomendaciones)
-.then(function(response){
-  return response.json();
-})
+          
+          for(let i = 0; i < 5; i++){
+            recomendacionesHTML +=
+            `<article>
+              <h3>${recomendacion[i].title}</h3>
+              <img class="foto" src="https://image.tmdb.org/t/p/original${recomendacion[i].poster_path}">
+            </article>`;
+          }
+          
+          seccion1.innerHTML = recomendacionesHTML;
 
-.then(function(data){
-  console.log(data.results)
-  let recomendacion = data.results
-  let seccion1 = document.querySelector(".oculta")
-  let recomendaciones = ""
-
-  for(let i = 0; i < recomendacion.length; i++){
-    recomendaciones +=
-    `<article>
-      <h3>Recomendaciones</h3>
-      <img class="foto" src="https://image.tmdb.org/t/p/original${recomendacion.poster_path}
-      <a href = https://api.themoviedb.org/3/movie/${pelicula[i].id}/recommendations></a>
-    </article>
-    `
-  }
-  seccion1.innerHTML = recomendaciones
-})
- 
-.catch(function(error){
-  console.log(`El error es: ${error}`);
-}) }); 
-
+          
+          seccion1.classList.toggle('visible');
+        })
+        .catch(function(error) {
+          console.log(`El error es: ${error}`);
+        });
+    });
   })
-.catch(function(error){
-  console.log(`El error es: ${error}`);
-});
+  .catch(function(error){
+    console.log(`El error es: ${error}`);
+  });
 
-
-
-
- 
+  
