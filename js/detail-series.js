@@ -30,9 +30,9 @@ fetch(detalleSerie)
     function obtenerGeneros(generos) {
       let enlacesGeneros = '';
     
-      for (let i = 0; i < generos.length; i++) {
+      for (let i = 0; i < 6; i++) {
         let genero = generos[i];
-        let enlace = `<a href="./detalle-genero.html?idGenero=${genero.id}">${genero.name}</a>`;
+        let enlace = `<a href="./detail-genres.html?idGenero=${genero.id}">${genero.name}</a>`;
       
         enlacesGeneros += enlace;
     
@@ -62,8 +62,9 @@ fetch(detalleSerie)
           for (let i = 0; i < 5; i++) {
             recomendacionesHTML +=
               `<article>
-                <h3>${recomendacion[i].title}</h3>
-                <img class="foto" src="https://image.tmdb.org/t/p/original${recomendacion[i].poster_path}">
+                <h3><a href="./detail-movie.html?idPelicula=${recomendacion[i].id}">${recomendacion[i].title}</a></h3>
+                <a href="./detail-movie.html?idPelicula=${recomendacion[i].id}">
+                <img class="foto" src="https://image.tmdb.org/t/p/original${recomendacion[i].poster_path}"></a>
               </article>`;
           }
           

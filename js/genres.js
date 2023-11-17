@@ -14,7 +14,7 @@ fetch(generosPeliURL)
         for (let i = 0; i < generos.length; i++) {
             contenido += `
         <article>
-          <a href="./detail-genre.html?idGenero=${generos[i].id}&tipo=pelicula">
+          <a href="./detail-genres.html?idGenero=${generos[i].id}">
             <h2>${generos[i].name}</h2>
           </a>
         </article>`;
@@ -38,7 +38,7 @@ fetch(generosSerieURL)
         for (let i = 0; i < generos2.length; i++) {
             contenido += `
         <article>
-          <a href="./detail-genre.html?idGenero=${generos2[i].id}&tipo=serie">
+          <a href="./detail-genres.html?idGenero=${generos2[i].id}">
             <h2>${generos2[i].name}</h2>
           </a>
         </article>`;
