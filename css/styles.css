@@ -85,6 +85,7 @@ h2{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     width: 300px;
     font-size: 20px;
+    
 }
 
 
@@ -250,13 +251,14 @@ footer{
         flex-wrap: wrap;
         max-width: 100%;
         justify-content: center;
-        background-color: steelblue;
+        
     }
 
     .menu2{
         width: 100%;
         align-self: center;
         flex-wrap: wrap;
+        
     }
 
     .grupos{
@@ -279,7 +281,7 @@ footer{
         align-self: center;
     }
 
-}
+
     .detallemovie{
         display: flex;
         flex-direction: column;
