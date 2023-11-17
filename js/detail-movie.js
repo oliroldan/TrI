@@ -3,6 +3,7 @@ let urlParams = new URLSearchParams(window.location.search);
 let movieId = urlParams.get('idPelicula');
 let detallePelicula = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${ApiKey}&language=es`;
 let recomendaciones = ` `
+let recomendacion = "Ver recomendaciones"
 
 fetch(detallePelicula)
   .then(function(response){
@@ -22,37 +23,35 @@ fetch(detallePelicula)
           <li>Duración: ${pelicula.runtime} minutos</li>
           <li>Sinopsis: ${pelicula.overview}</li>
           <li>Géneros: ${obtenerGeneros(pelicula.genres)}</li>
+          <li class="boton"> ${recomendacion} </li>
         </ul>
       </article>`;
 
     
     seccion.innerHTML = detallePeliculaHTML;
-  })
-  .catch(function(error){
-    console.log(`El error es: ${error}`);
-  });
 
-
-  function obtenerGeneros(generos) {
-    let enlacesGeneros = '';
-  
-    for (let i = 0; i < generos.length; i++) {
-      let genero = generos[i];
-      let enlace = `<a href="./detalle-genero.html?idGenero=${genero.id}">${genero.name}</a>`;
-  
+    function obtenerGeneros(generos) {
+      let enlacesGeneros = '';
     
-      enlacesGeneros += enlace;
-  
-      if (i < generos.length - 1) {
-        enlacesGeneros += ', ';
+      for (let i = 0; i < generos.length; i++) {
+        let genero = generos[i];
+        let enlace = `<a href="./detalle-genero.html?idGenero=${genero.id}">${genero.name}</a>`;
+    
+      
+        enlacesGeneros += enlace;
+    
+        if (i < generos.length - 1) {
+          enlacesGeneros += ', ';
+        }
       }
-    }
-  
-    return enlacesGeneros;
-  }
-  
+    
+      return enlacesGeneros;
+    };
 
+  let boton = document.querySelector('boton');				
+  boton.addEventListener('click', function(){  //PROBLEMA !!!!
 
+      			
 fetch(recomendaciones)
 .then(function(response){
   return response.json();
@@ -78,4 +77,14 @@ fetch(recomendaciones)
  
 .catch(function(error){
   console.log(`El error es: ${error}`);
+}) }); 
+
+  })
+.catch(function(error){
+  console.log(`El error es: ${error}`);
 });
+
+
+
+
+ 
