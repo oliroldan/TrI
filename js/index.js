@@ -13,7 +13,7 @@ fetch(mejorCalificada)
     let peliAgregada = document.querySelector("#mejorcalificacion"); 
     let todasPelis = "";
 
-    for (let i = 0; i < 6; i++) {
+    for (let i = 0; i < 5; i++) {
        todasPelis += ` <article class="pelis">
                            <h3><a href="./detail-movie.html?idPelicula=${peliculas[i].id}">${peliculas[i].title}</a></h3>
                            <a href="./detail-movie.html?idPelicula=${peliculas[i].id}">
@@ -44,7 +44,7 @@ fetch(populares)
     let seccion = document.querySelector("#populares");
     let contenido = "";
 
-    for (let i = 0; i < 6; i++) {
+    for (let i = 0; i < 5; i++) {
         contenido += `<article class="pelis">
                            <h3> <a href="./detail-movie.html?idPelicula=${peliculas[i].id}">${peliculas[i].title}</a></h3>
                            <a href="./detail-movie.html?idPelicula=${peliculas[i].id}">
@@ -73,7 +73,7 @@ fetch(seriesTop)
     let seccion = document.querySelector("#series");
     let bloque = "";
 
-    for (let i = 0; i < 6; i++) {
+    for (let i = 0; i < 5; i++) {
         bloque += ` 
             <article class="pelis">
                 <h3><a href="./detail-serie.html?idSerie=${seriesMejor[i].id}">${seriesMejor[i].name}</a></h3>
