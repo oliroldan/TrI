@@ -23,8 +23,6 @@ fetch(detailGenreMovie)
 
     for(let i =0; i < 5; i++){
         detalleGenerosHtml += `
-        
-        <h2>${peliculas.title}</h2>
         <article class="pelis">
          <h3><a href="./detail-movie.html?idPelicula=${peliculas[i].id}">${peliculas[i].title}</a></h3>
          <a href="./detail-movie.html?idPelicula=${peliculas[i].id}">
@@ -39,4 +37,28 @@ fetch(detailGenreMovie)
     console.log(`El error es: ${error}`)
 });
 
+fetch(detailGenreSeries)
+.then(function(response){
+    return response.json();
+})
+.then(function(data){
+    console.log(data.results);
+    let series = data.results;
+    let seccion = document.querySelector(".detalleGenerosSerie");
+    let detalleGenerosHtml = "";
 
+    for(let i =0; i < 5; i++){
+        detalleGenerosHtml += `
+        <article class="pelis">
+         <h3><a href="./detail-serie.html?idPelicula=${series[i].id}">${series[i].name}</a></h3>
+         <a href="./detail-serie.html?idPelicula=${series[i].id}">
+         <img class="foto" src="https://image.tmdb.org/t/p/original${series[i].poster_path}"></a>
+        </article>`
+    }
+
+    seccion.innerHTML = detalleGenerosHtml;
+
+})
+.catch(function(error){
+    console.log(`El error es: ${error}`)
+});

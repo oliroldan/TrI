@@ -14,7 +14,7 @@ fetch(detalleSerie)
     let serie = data;
     let seccion = document.querySelector(".detalleserie");
     let detalleSerieHTML = `
-      <article class="detalleserie">
+      <article class="cuadros-grupos">
         <h2>${serie.name}</h2>
         <img class="foto" src="https://image.tmdb.org/t/p/original${serie.poster_path}">
         <ul>
