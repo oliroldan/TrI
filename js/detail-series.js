@@ -2,6 +2,7 @@ let ApiKey = "3df94698eaca4ce878e2c557de004fb2";
 let urlParams = new URLSearchParams(window.location.search);
 let idSerie = urlParams.get('idSerie');
 let detalleSerie = `https://api.themoviedb.org/3/tv/${idSerie}?api_key=${ApiKey}`
+let recomendaciones = `https://api.themoviedb.org/3/movie/${idSerie}/recommendations?api_key=${ApiKey}&language=es`;
 
 
 fetch(detalleSerie)
@@ -54,7 +55,7 @@ fetch(detalleSerie)
         })
         .then(function(data) {
           console.log(data.results);
-          let recomendacion = data.results;
+          let recomendacion = data;
           let seccion1 = document.querySelector(".oculta");
           let recomendacionesHTML = "";
 
