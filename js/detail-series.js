@@ -1,7 +1,7 @@
 let ApiKey = "3df94698eaca4ce878e2c557de004fb2";
-const urlParams = new URLSearchParams(window.location.search);
-const idSerie = urlParams.get('idSerie');
-let detalleSerie = `https://api.themoviedb.org/3/tv/${idSerie}}?api_key=${ApiKey}`
+let urlParams = new URLSearchParams(window.location.search);
+let idSerie = urlParams.get('idSerie');
+let detalleSerie = `https://api.themoviedb.org/3/tv/${idSerie}?api_key=${ApiKey}`
 
 
 fetch(detalleSerie)
@@ -10,7 +10,7 @@ fetch(detalleSerie)
   })
   .then(function(data){
     console.log(data);
-    let pelicula = data;
+    let serie = data;
     let seccion = document.querySelector(".detalleserie");
     let detalleSerieHTML = `
       <article class="detalleserie">
@@ -18,15 +18,14 @@ fetch(detalleSerie)
         <img class="foto" src="https://image.tmdb.org/t/p/original${serie.poster_path}">
         <ul>
           <li>Calificación: ${serie.vote_average}</li>
-          <li>Fecha de estreno: ${serie.release_date}</li>
-          <li>Duración: ${serie.runtime} minutos</li>
+          <li>Fecha de estreno: ${serie.first_air_date}</li>
           <li>Sinopsis: ${serie.overview}</li>
-          <li>Géneros: ${obtenerGeneros(serie.genres)}</li>
+          <li>Géneros: ${obtenerGeneros(serie.genre_ids)}</li>
           <li class="boton"> <button class="verRecomendaciones">Ver Recomendaciones</button></li>
         </ul>
       </article>`;
 
-    seccion.innerHTML = detallePeliculaHTML;
+    seccion.innerHTML = detalleSerieHTML;
 
     function obtenerGeneros(generos) {
       let enlacesGeneros = '';
