@@ -70,8 +70,12 @@ fetch(detallePelicula)
           
           seccion1.innerHTML = recomendacionesHTML;
 
-          
-          seccion1.classList.toggle('visible');
+          //for (let i = 0; i < peliculas.length; i++) {
+            //todasPelis += `<article class="portada">
+                               // <a href="./detail-movie.html?idPelicula=${peliculas[i].id}">
+                                //<img class="foto" src="https://image.tmdb.org/t/p/original${peliculas[i].poster_path}"></a>
+                               // <h2>Película: <a href="./detail-movie.html?idPelicula=${peliculas[i].id}">${peliculas[i].title}</a></h2>
+                            //</article>`;
         })
         .catch(function(error) {
           console.log(`El error es: ${error}`);
