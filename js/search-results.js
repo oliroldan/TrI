@@ -39,5 +39,3 @@ fetch(urlSearch)
 })
 
 
-
-

@@ -102,7 +102,6 @@ fetch(detallePelicula)
             reviewsHTML +=
             `<article>
               <h3>${review.id}</h3>
-             
             </article>`;
           }
           seccion2.innerHTML = reviewsHTML;
