@@ -1,7 +1,7 @@
 let ApiKey = "3df94698eaca4ce878e2c557de004fb2";
 let urlParams = new URLSearchParams(window.location.search);
-let detailGenreSerieId = urlParams.get('detailGenreSerieId');
-let detailGenremovieId = urlParams.get('detailGenremovieId');
+let detailGenreSerieId = urlParams.get('idGenero');
+let detailGenremovieId = urlParams.get('idGenero');
 
 let detailGenreMovie = `https://api.themoviedb.org/3/discover/movie?api_key=${ApiKey}&with_genres=${detailGenremovieId}`;
 let detailGenreSeries = `https://api.themoviedb.org/3/discover/tv?api_key=${ApiKey}&with_genres=${detailGenreSerieId}`;

@@ -3,7 +3,7 @@ let urlParams = new URLSearchParams(window.location.search);
 let movieId = urlParams.get('idPelicula');
 let detallePelicula = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${ApiKey}&language=es`;
 let recomendaciones = `https://api.themoviedb.org/3/movie/${movieId}/recommendations?api_key=${ApiKey}&language=es`;
-let reviews= `https://api.themoviedb.org/3/movie/${movieId}/reviews?api_key=${ApiKey}&language=es`
+let reviews= `https://api.themoviedb.org/3/movie/${movieId}/reviews?api_key=${ApiKey}&language=es`;
 
 fetch(detallePelicula)
   .then(function(response){
@@ -24,6 +24,7 @@ fetch(detallePelicula)
           <li>Sinopsis: ${pelicula.overview}</li>
           <li>Géneros: ${obtenerGeneros(pelicula.genres)}</li>
           <li class="boton"> <button class="verRecomendaciones">Ver Recomendaciones</button></li>
+          <li class = "bot"><button class = "verReviews">Ver reviews</button></li>
         </ul>
       </article>`;
 
@@ -82,39 +83,38 @@ fetch(detallePelicula)
           console.log(`El error es: ${error}`);
         });
     });
-    /*/
-    let bot = document.querySelector('.verRecomendaciones');				
-    boton.addEventListener('click', function() {
+
+    let bot = document.querySelector('.verReviews');				
+    bot.addEventListener('click', function(){
       
-      fetch(recomendaciones)
+      fetch(reviews)
         .then(function(response) {
           return response.json();
         })
         .then(function(data) {
-          console.log(data.results);
-          let recomendacion = data.results;
-          let seccion1 = document.querySelector(".oculta");
-          let recomendacionesHTML = "";
+          console.log(data);
+          let review = data;
+          let seccion2 = document.querySelector(".oculta2");
+          let reviewsHTML = "";
 
           
           for(let i = 0; i < 5; i++){
-            recomendacionesHTML +=
+            reviewsHTML +=
             `<article>
-              <h3><a href="./detail-movie.html?idPelicula=${recomendacion[i].id}">${recomendacion[i].title}</a></h3>
-              <a href="./detail-movie.html?idPelicula=${recomendacion[i].id}">
-              <img class="foto" src="https://image.tmdb.org/t/p/original${recomendacion[i].poster_path}"></a>
+              <h3>${review.id}</h3>
+             
             </article>`;
           }
-          seccion1.innerHTML = recomendacionesHTML;
+          seccion2.innerHTML = reviewsHTML;
 
-        .catch(function(error) {
-          console.log(`El error es: ${error}`);
+        })
+
+        .catch(function(error){
+          console.log(`El error es: ${error}`)
         });
-    });
-    /*/
-  })
+    })
+  
   .catch(function(error){
     console.log(`El error es: ${error}`);
-  });
-
-  
+  })
+})
